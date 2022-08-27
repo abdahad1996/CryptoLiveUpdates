@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Asc-Bx-WJC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CryptoList-->
+        <scene sceneID="QUL-69-jjl">
+            <objects>
+                <tableViewController id="Asc-Bx-WJC" customClass="CryptoListViewController" customModule="CryptoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Moh-KD-8mW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="cryptoCell" rowHeight="83" id="ecP-fr-rly" customClass="CryptoCell" customModule="CryptoList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="83"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ecP-fr-rly" id="Bl5-Dg-7hd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="OlS-yW-5Ax">
+                                            <rect key="frame" x="16" y="10" width="382" height="63"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="XPe-Y3-LCh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="29.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZh-yz-yJN">
+                                                            <rect key="frame" x="0.0" y="0.0" width="28.5" height="29.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu0-32-v7N">
+                                                            <rect key="frame" x="332" y="0.0" width="50" height="29.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="Knr-ZG-jFb">
+                                                    <rect key="frame" x="0.0" y="33.5" width="382" height="29.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjD-ZD-mJC">
+                                                            <rect key="frame" x="0.0" y="0.0" width="36.5" height="29.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="0(0%)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IF-Wm-BXg">
+                                                            <rect key="frame" x="341" y="0.0" width="41" height="29.5"/>
+                                                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="4"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="OlS-yW-5Ax" secondAttribute="bottom" constant="10" id="Mk5-zR-rgB"/>
+                                        <constraint firstItem="OlS-yW-5Ax" firstAttribute="top" secondItem="Bl5-Dg-7hd" secondAttribute="top" constant="10" id="Oqx-h9-Hvx"/>
+                                        <constraint firstItem="OlS-yW-5Ax" firstAttribute="leading" secondItem="Bl5-Dg-7hd" secondAttribute="leading" constant="16" id="n6M-Bh-CI4"/>
+                                        <constraint firstAttribute="trailing" secondItem="OlS-yW-5Ax" secondAttribute="trailing" constant="16" id="vGJ-pu-IC6"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="coinNameLabel" destination="ZjD-ZD-mJC" id="WWN-U5-Ukl"/>
+                                    <outlet property="coinSymbolLabel" destination="jZh-yz-yJN" id="0hr-6u-YIO"/>
+                                    <outlet property="priceLabel" destination="fu0-32-v7N" id="yvt-YK-75Z"/>
+                                    <outlet property="tickerLabel" destination="5IF-Wm-BXg" id="5hR-J3-cq6"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="Asc-Bx-WJC" id="BWR-Bb-nST"/>
+                            <outlet property="delegate" destination="Asc-Bx-WJC" id="tie-Si-bCC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="CryptoList" id="sgN-ow-XO3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hA-6o-yGc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="489.85507246376818" y="-48.214285714285715"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="NW5-FJ-A6r">
+            <objects>
+                <tableViewController storyboardIdentifier="newsVC" id="ZUx-5f-3r1" customClass="NewsViewController" customModule="CryptoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="pT6-hR-olq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="206" id="1aW-18-3rq" customClass="NewsCell" customModule="CryptoList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="206"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1aW-18-3rq" id="dXU-zN-ijM">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="206"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oWe-HX-Zor">
+                                            <rect key="frame" x="16" y="16" width="382" height="174"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="thecoinrise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFC-J3-XGi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="58.5" height="13.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Universe Finance Wants To Be The Number One Uniswap V3 Liquidity Management Platform, IDO To Launch Soon" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwY-3q-S7w">
+                                                    <rect key="frame" x="0.0" y="23.5" width="382" height="36"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqE-Vu-f3a">
+                                                    <rect key="frame" x="0.0" y="69.5" width="377" height="104.5"/>
+                                                    <string key="text">In this industry, the name ‘Uniswap’ has become quite popular and for good reason. This is a cryptocurrency exchange that utilizes a decentralized network protocol, which also facilitates automated transactions between various crypto tokens on Ethereum’s blockchain via the usage of smart contracts. With that in mind, Universe Finance is a name that is also [&amp;#8230;]The post Universe Finance Wants To Be The Number One Uniswap V3 Liquidity Management Platform, IDO To Launch Soon appeared first on Blockchain, Crypto and Stock News.</string>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="oWe-HX-Zor" secondAttribute="bottom" constant="16" id="03u-cL-biT"/>
+                                        <constraint firstAttribute="trailing" secondItem="oWe-HX-Zor" secondAttribute="trailing" constant="16" id="MuY-Vl-ZZ3"/>
+                                        <constraint firstItem="oWe-HX-Zor" firstAttribute="top" secondItem="dXU-zN-ijM" secondAttribute="top" constant="16" id="rfF-0c-oej"/>
+                                        <constraint firstItem="oWe-HX-Zor" firstAttribute="leading" secondItem="dXU-zN-ijM" secondAttribute="leading" constant="16" id="vVT-Rr-pGC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bodyLabel" destination="YqE-Vu-f3a" id="C8M-yJ-FKX"/>
+                                    <outlet property="sourceLabel" destination="QFC-J3-XGi" id="WvB-Fa-3Xm"/>
+                                    <outlet property="titleLabel" destination="TwY-3q-S7w" id="Vrf-Cy-sJA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="ZUx-5f-3r1" id="b4b-Hw-7VY"/>
+                            <outlet property="delegate" destination="ZUx-5f-3r1" id="hEF-7l-7SE"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="INI-vF-hzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257.9710144927537" y="-48.214285714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
