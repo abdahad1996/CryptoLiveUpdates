@@ -52,6 +52,8 @@ For the ***Feature/Domain module*** I have separated the features into folders w
 
 Finally, I composed all the module inside the **SceneDeelgate**.
 
+<img width="610" alt="Screen Shot 2022-08-21 at 6 45 51 AM" src="https://user-images.githubusercontent.com/28492677/187049457-52046a6f-9f72-4f66-bbef-8a8018be641f.png">
+
 #### TODO:
 - Unit Testing for WebSocket layer
 - add snapshot tests to add a safety net for UI bugs
