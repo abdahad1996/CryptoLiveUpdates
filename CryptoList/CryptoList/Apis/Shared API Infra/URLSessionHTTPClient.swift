@@ -1,25 +1,11 @@
 //
-//  HTTPClient.swift
+//  URLSessionHTTPClient.swift
 //  CryptoList
 //
-//  Created by abdul ahad  on 13/02/22.
+//  Created by ahad on 8/28/22.
 //
 
 import Foundation
-
-public protocol HTTPClientTask {
-    func cancel()
-}
-
-public protocol HTTPClient {
-    typealias Result = Swift.Result<(Data, HTTPURLResponse), Error>
-    
-    /// The completion handler can be invoked in any thread.
-    /// Clients are responsible to dispatch to appropriate threads, if needed.
-    @discardableResult
-    func get(from url: URL, completion: @escaping (Result) -> Void) -> HTTPClientTask
-}
-
 class URLSessionHTTPClient : HTTPClient {
     private let session: URLSession
     

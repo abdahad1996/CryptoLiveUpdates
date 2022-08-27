@@ -50,6 +50,7 @@
 		61C7C52A28B75EDF00F96331 /* NewsRemoteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7C52928B75EDF00F96331 /* NewsRemoteLoader.swift */; };
 		61C7F70328B52E8A000007A9 /* NewCoinLivePriceMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7F70228B52E89000007A9 /* NewCoinLivePriceMapper.swift */; };
 		61C7F70628B645CD000007A9 /* CoinWebSocketTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7F70528B645CC000007A9 /* CoinWebSocketTracker.swift */; };
+		61DF4AA228BAC591007D1069 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF4AA128BAC591007D1069 /* URLSessionHTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		61C7C52928B75EDF00F96331 /* NewsRemoteLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRemoteLoader.swift; sourceTree = "<group>"; };
 		61C7F70228B52E89000007A9 /* NewCoinLivePriceMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCoinLivePriceMapper.swift; sourceTree = "<group>"; };
 		61C7F70528B645CC000007A9 /* CoinWebSocketTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinWebSocketTracker.swift; sourceTree = "<group>"; };
+		61DF4AA128BAC591007D1069 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,10 +164,10 @@
 		6046E19427B69D28001D3F0F /* CryptoList */ = {
 			isa = PBXGroup;
 			children = (
+				61DF4AA028BAC54C007D1069 /* Apis */,
 				61C7C52428B6D23B00F96331 /* App */,
-				61C7C52228B6D08900F96331 /* Domain */,
+				61C7C52228B6D08900F96331 /* Features */,
 				61C7C52128B6CE6000F96331 /* Presentation */,
-				602DECFC27B7B70800AA0775 /* Helper */,
 			);
 			path = CryptoList;
 			sourceTree = "<group>";
@@ -241,31 +243,27 @@
 		61C7C52128B6CE6000F96331 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				602DECFC27B7B70800AA0775 /* Helper */,
 				6046E1CA27B6AAE9001D3F0F /* Crypto */,
 				6046E1C927B6AADC001D3F0F /* News */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		61C7C52228B6D08900F96331 /* Domain */ = {
+		61C7C52228B6D08900F96331 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				61C7C52C28B7600400F96331 /* New Coin API */,
-				61C7C52B28B75FAC00F96331 /* New Coin Feature */,
-				61C7C52828B75E6400F96331 /* News Feature */,
-				61C7C52528B7591D00F96331 /* Crypto Feature */,
-				61C7C52328B6D0AF00F96331 /* Shared API Infra */,
-				60B8547F27B8CDD4008D0CE4 /* Crypto API */,
-				60B8548027B8CDE4008D0CE4 /* News API */,
+				61DF4AA428BAC767007D1069 /* Crypto */,
+				61DF4AA328BAC74E007D1069 /* News */,
 			);
-			path = Domain;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		61C7C52328B6D0AF00F96331 /* Shared API Infra */ = {
 			isa = PBXGroup;
 			children = (
 				61C7F70528B645CC000007A9 /* CoinWebSocketTracker.swift */,
-				60B8547927B8AF28008D0CE4 /* HTTPClient.swift */,
+				61DF4AA128BAC591007D1069 /* URLSessionHTTPClient.swift */,
 			);
 			path = "Shared API Infra";
 			sourceTree = "<group>";
@@ -309,12 +307,41 @@
 			path = "New Coin Feature";
 			sourceTree = "<group>";
 		};
-		61C7C52C28B7600400F96331 /* New Coin API */ = {
+		61C7C52C28B7600400F96331 /* Crypto New Coin API */ = {
 			isa = PBXGroup;
 			children = (
 				61C7F70228B52E89000007A9 /* NewCoinLivePriceMapper.swift */,
 			);
-			path = "New Coin API";
+			path = "Crypto New Coin API";
+			sourceTree = "<group>";
+		};
+		61DF4AA028BAC54C007D1069 /* Apis */ = {
+			isa = PBXGroup;
+			children = (
+				60B8547927B8AF28008D0CE4 /* HTTPClient.swift */,
+				61C7C52328B6D0AF00F96331 /* Shared API Infra */,
+			);
+			path = Apis;
+			sourceTree = "<group>";
+		};
+		61DF4AA328BAC74E007D1069 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				60B8548027B8CDE4008D0CE4 /* News API */,
+				61C7C52B28B75FAC00F96331 /* New Coin Feature */,
+				61C7C52828B75E6400F96331 /* News Feature */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		61DF4AA428BAC767007D1069 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				61C7C52C28B7600400F96331 /* Crypto New Coin API */,
+				61C7C52528B7591D00F96331 /* Crypto Feature */,
+				60B8547F27B8CDD4008D0CE4 /* Crypto API */,
+			);
+			path = Crypto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +456,7 @@
 				602DECFE27B7B71700AA0775 /* DictionaryExtension.swift in Sources */,
 				609BBE3C27B742EE0085290B /* NewsLoader.swift in Sources */,
 				6046E19827B69D28001D3F0F /* SceneDelegate.swift in Sources */,
+				61DF4AA228BAC591007D1069 /* URLSessionHTTPClient.swift in Sources */,
 				6046E1CD27B6B2E2001D3F0F /* CryptoLoader.swift in Sources */,
 				60A787D227B95DB7007F8C33 /* CryptoItemViewModel.swift in Sources */,
 				60B8547C27B8B51F008D0CE4 /* CryptoMapper.swift in Sources */,

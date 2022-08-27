@@ -1,6 +1,5 @@
 [![IDE](https://img.shields.io/badge/Xcode-13.2.1-blue.svg)](https://developer.apple.com/xcode/)
 [![Platform](https://img.shields.io/badge/iOS-15.2-green.svg)](https://developer.apple.com/ios/)
-[![Build Status](https://github.com/IhwanID/CryptoList/actions/workflows/CryptoList.yml/badge.svg)](https://github.com/IhwanID/CryptoList/actions/workflows/CryptoList.yml)
 
 # CryptoList
 
@@ -38,9 +37,25 @@ Then the app should display list of most active cryptocurrencies with live price
 - Using URLSession for load data coin and news
 - Using URLSessionWebSocketTask for load live price updates from Websocket
 
+## App Architecture :
+
+I applied clean architecture in all my modules. you can see that the app is including the following modules:
+ - API module
+ - Feature/Domain module
+ - UI and Presentation module
+
+For the ***API module*** I used **URLSession** to handle the HTTP calls, Of course, the app has been implemented in a way that we can use any framework or third parties like **Alamofire**.
+
+For the ***Presentation module*** I used **MVVM** Design pattern, and I've tried to decouple all my modules using protocols, so you can find that I hide the implementation details by using protocols. The UI as a whole is a single horizontal slice. 
+
+For the ***Feature/Domain module*** I have separated the features into folders which are completely agnostic of the ui layer and the data layers(api/cache) and can be easily be converted into a feature slice/framework depending on requirements .
+
+Finally, I composed all the module inside the **SceneDeelgate**.
+
 #### TODO:
-- Decouple WebSocket
 - Unit Testing for WebSocket layer
+- add snapshot tests to add a safety net for UI bugs
+- make modularization with vertical slicing each feature with its ui counterpart in a separate branch 
 
 #### How to install :
 - Make sure you have Xcode 13.2.1 or above
