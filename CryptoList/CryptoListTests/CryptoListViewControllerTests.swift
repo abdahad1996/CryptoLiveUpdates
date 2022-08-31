@@ -74,7 +74,9 @@ class CryptoListViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         sut.beginAppearanceTransition(true, animated: false)
         
-        sut.didRecieveNewCoinPrice("BTC", 99)
+        
+        let newPrice = NewCoinPrice(symbol: "BTC", price: 99)
+        sut.didRecieveNewCoinPrice(newCoinPrice: newPrice)
         
         XCTAssertEqual(sut.numberOfCoin(), 1)
         XCTAssertEqual(sut.name(atRow: 0), "Bitcoin")
