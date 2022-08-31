@@ -54,9 +54,17 @@ Finally, I composed all the module inside the **SceneDeelgate**.
 
 <img width="610" alt="Screen Shot 2022-08-21 at 6 45 51 AM" src="https://user-images.githubusercontent.com/28492677/187049457-52046a6f-9f72-4f66-bbef-8a8018be641f.png">
 
-#### TODO:
+## Tests:
+- Complete unit tests for ***Feature/Domain module*** 
+- Complete unit tests for ***Presentation module*** 
+<img width="1346" alt="Screen Shot 2022-09-01 at 12 40 47 AM" src="https://user-images.githubusercontent.com/28492677/187767845-e547a08a-9d84-4c01-ab5b-d3f2736f70aa.png">
+
+#### Improvements:
 - Unit Testing for WebSocket layer
+- unit tests for network layer
 - add snapshot tests to add a safety net for UI bugs
+- add dark mode 
+- add support for landscape
 - make modularization with vertical slicing each feature with its ui counterpart in a separate branch 
 
 #### How to install :
